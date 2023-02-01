@@ -1,0 +1,17 @@
+<h1>任務資訊</h1>
+<%= render "form" %>
+<%=form_with(model: @mission) do |f|%>
+<div>
+<%=f.label :task,"任務描述"%>
+<%=f.text_area :task,required: true %>
+</div>
+<div>
+<%=f.label :start_date,"開始時間"%>
+<%=f.datetime_field :start_date%>
+</div>
+<div>
+<%=f.label :due_date,"結束日期"%>
+<%=f.datetime_field :due_date%>
+</div>
+<%=f.submit "將任務加入清單"%>
+<% end %>

@@ -1,0 +1,12 @@
+<h1>任務管理列表</h1>
+<%= render "form" %>
+
+  <%@mission.each do |mission|%>
+  <li>
+    任務內容：<%=mission.task%>
+    開始時間：<%=mission.start_date%>
+    結束時間：<%mission.due_date%>
+  </li>
+  <%end%>
+
+<%=link_to "建立任務",new_mission_list_path%>
